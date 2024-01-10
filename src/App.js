@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import colorData from "./colorData.json";
+import ColorList from "./ColorList";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // Destructuring json colorData into colors variable.
+  const [colors] = useState(colorData);
+
+  // Returning our root app with ColorList child component. Passing colors to ColorList as property.
+  return <ColorList colors={colors} />;
 }
 
 export default App;
