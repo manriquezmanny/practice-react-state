@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import colorData from "./colorData.json";
-import ColorList from "./ColorList";
+import colorData from './color-data.json';
+import ColorList from './ColorList.js';
 
 function App() {
   // Destructuring json colorData into colors variable.
